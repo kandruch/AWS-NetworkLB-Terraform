@@ -1,13 +1,13 @@
 variable "AWS_REGION" {
   type        = "string"
   description = "The AWS region to deploy into (e.g. us-east-1)"
-  default     = "eu-west-1"
+  default     = "us-east-1"
 }
 
 variable "project" {
   type        = "string"
   description = "Name of the project these resources are being created for"
-  default     = "FraudScore"
+  default     = "Application-Name"
 }
 
 variable "purpose" {
@@ -19,7 +19,7 @@ variable "purpose" {
 variable "creator" {
   type        = "string"
   description = "Person creating these resources"
-  default     = "Keith.Andruch@equifax.com"
+  default     = "email?"
 }
 
 variable "environment" {
@@ -49,7 +49,7 @@ variable "protocol" {
 variable "vpc_id" {
   type        = "string"
   description = "The identifier of the VPC in which to create the target group."
-  default     = "vpc-9db94efa"
+  default     = "vpc-id"
 }
 
 variable "health_check_interval" {
@@ -102,6 +102,6 @@ variable "load_balancer_type" {
 
 variable "subnets" {
   type        = "list"
-  description = "Which subnets to use for the load balancer e.g..subnet-0ab08d52"
-  default     = ["subnet-0ab08d52"]
+  description = "Which subnets to use for the load balancer e.g..subnet-id"
+  default     = ["subnet-id"]
 }
